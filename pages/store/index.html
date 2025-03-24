@@ -3,47 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store - Pokémon GO Web Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pokémom Go Store</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
-    
-    <!-- Navbar -->
-    <nav class="bg-blue-600 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-white text-2xl font-bold">Pokémon GO Store</a>
-            <ul class="flex space-x-6 text-white">
-                <li><a href="register.html" class="hover:underline">Register</a></li>
-                <li><a href="store.html" class="hover:underline">Store</a></li>
-                <li><a href="cart.html" class="hover:underline">Cart</a></li>
-                <li><a href="payment.html" class="hover:underline">Payment</a></li>
-                <li><a href="transactions.html" class="hover:underline">Transactions</a></li>
-                <li><a href="profile.html" class="hover:underline">Profile</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Store Page -->
-    <section class="container mx-auto p-6">
-        <h2 class="text-3xl font-bold mb-6">Shop In-Game Items</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Sample Item -->
-            <div class="bg-white p-4 rounded-lg shadow-lg text-center">
-                <img src="assets/images/item1.png" alt="Poké Balls" class="w-full h-32 object-contain mb-4">
-                <h3 class="text-xl font-semibold">Poké Balls</h3>
-                <p class="text-gray-600">x100 Poké Balls</p>
-                <p class="text-lg font-bold mt-2">$4.99</p>
-                <button class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Add to Cart</button>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="pg.png" alt="Logo"> 
+            <h1> Web Store</h1>
+        </div>
+        <nav>
+            <button onclick="location.href='#'">Register</button>
+            <button onclick="location.href='#'">Store</button>
+            <button onclick="location.href='#'">Cart</button>
+            <button onclick="location.href='#'">Payment</button>
+            <button onclick="location.href='#'">Transactions</button>
+            <button onclick="location.href='#'">Profile</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured">
+            <h2>Featured</h2>
+            <div class="feature-box">
+                <img src="featurebox.png" alt="Featured Item"> 
+                <div>
+                    <h1>Pokémon GO Fest 2025: Global Ticket</h1>
+                    <p>Can only be purchased 1 time.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Pokémon GO Fest 2025: Global Ticket', '₱373.15', 'featurebox.png', 'This is a special ticket for Pokémon GO Fest 2025.')">
+                        ₱373.15
+                    </button>
+                </div>
             </div>
-            <!-- Add more items here -->
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center p-4 mt-10">
-        <p>© 2025 Niantic, Inc. | This project is for educational purposes only. No copyright infringement is intended.</p>
-        <p>Developed by [Your Group Name]</p>
+        <section class="item-boxes">
+            <h2>Item Boxes</h2>
+            <div class="box-container">
+                <div class="box">
+                    <img src="item1.png" alt="Item Box 1"> 
+                    <h4>Deep Depths Ultra Ticket Box</h4>
+                    <p>Can only be purchased 1 time.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Deep Depths Ultra Ticket Box', '₱59.00', 'item1.png', 'This is a special ticket for the Deep Depths event.')">
+                        ₱59.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item2.png" alt="Item Box 2"> 
+                    <h4>Ultra Community Day Box</h4>
+                    <p>Can only be purchased 1 time.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Ultra Community Day Box', '₱149.00', 'item2.png', 'This box contains special items for the Ultra Community Day.')">
+                        ₱149.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item3.png" alt="Item Box 3"> 
+                    <h4>Mega Absol Raid Day Ultra Ticket Box</h4>
+                    <p>Can only be purchased 1 time.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Mega Absol Raid Day Ultra Ticket Box', '₱149.00', 'item3.png', 'This ticket allows access to the Mega Absol Raid Day.')">
+                        ₱149.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item4.png" alt="Item Box 4"> 
+                    <h4>GO Rocket Box</h4>
+                    <p>Can only be purchased 1 time.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('GO Rocket Box', '₱245.65', 'item4.png', 'This box contains items to battle Team GO Rocket.')">
+                        ₱245.65
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item5.png" alt="Item Box 5"> 
+                    <h4>Ultra Raid Box</h4>
+                    <p>Can only be purchased 3 times .</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Ultra Raid Box', '₱149.00', 'item5.png', 'This box is designed for Ultra Raids.')">
+                        ₱149.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item6.png" alt="Item Box 6"> 
+                    <h4>Might and Mastery Box</h4>
+                    <p>Can only be purchased 3 times.</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Might and Mastery Box', '₱149.00', 'item6.png', 'This box contains items to enhance your Pokémon.')">
+                        ₱149.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item7.png" alt="Item Box 7"> 
+                    <h4>Egg Incubator</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Egg Incubator', '₱88.00', 'item7.png', 'This incubator helps hatch eggs faster.')">
+                        ₱88.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item8.png" alt="Item Box 8"> 
+                    <h4>Super Incubator</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Super Incubator', '₱88.00', 'item8.png', 'This super incubator is even more effective.')">
+                        ₱88.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item9.png" alt="Item Box 9"> 
+                    <h4>Max Revive</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Max Revive', '₱59.00', 'item9.png', 'Revives your Pokémon to full health.')">
+                        ₱59.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item10.png" alt="Item Box 10"> 
+                    <h4>Premium Battle Pass</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Premium Battle Pass', '₱88.00', 'item10.png', 'Access to exclusive battles and rewards.')">
+                        ₱88.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item11.png" alt="Item Box 11"> 
+                    <h4>Max Particle Pack x6</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Max Particle Pack x6', '₱235.00', 'item11.png', 'Contains particles for powering up Pokémon.')">
+                        ₱235.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item12.png" alt="Item Box 12"> 
+                    <h4>Max Mushroom</h4>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('Max Mushroom', '₱245.65', 'item12.png', 'A special mushroom for evolving Pokémon.')">
+                        ₱245.65
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="item-boxes2">
+            <h2>PokéCoins</h2>
+            <div class="box-container">
+                <div class="box">
+                    <img src="item13.png" alt="Item Box 13"> 
+                    <h4>110 PokéCoins</h4>
+                    <p>10 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('110 PokéCoins', '₱29.00', 'item13.png', 'This pack includes 110 PokéCoins and 10 bonus coins.')">
+                        ₱29.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item14.png" alt="Item Box 14"> 
+                    <h4>600 PokéCoins</h4>
+                    <p>50 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('600 PokéCoins', '₱149.00', 'item14.png', 'This pack includes 600 PokéCoins and 50 bonus coins.')">
+                        ₱149.00
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item15.png" alt="Item Box 15"> 
+                    <h4>1,300 PokéCoins</h4>
+                    <p>100 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('1,300 PokéCoins', '₱245.65', 'item15.png', 'This pack includes 1,300 PokéCoins and 100 bonus coins.')">
+                        ₱245.65
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item16.png" alt="Item Box 16"> 
+                    <h4>2,700 PokéCoins</h4>
+                    <p>200 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('2,700 PokéCoins', '₱500.65', 'item16.png', 'This pack includes 2,700 PokéCoins and 200 bonus coins.')">
+                        ₱500.65
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item17.png" alt="Item Box 17"> 
+                    <h4>5,600 PokéCoins</h4>
+                    <p>400 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('5,600 PokéCoins', '₱994.50', 'item17.png', 'This pack includes 5,600 PokéCoins and 400 bonus coins.')">
+                        ₱994.50
+                    </button>
+                </div>
+                <div class="box">
+                    <img src="item18.png" alt="Item Box 18"> 
+                    <h4>15,500 PokéCoins</h4>
+                    <p>1,000 Web Store Bonus Coins</p>
+                    <button style="font-size: 20px; font-weight: bold;" 
+                            onclick="openPopup('15,500 PokéCoins', '₱2,507', 'item18.png', 'This pack includes 15,500 PokéCoins and 1,000 bonus coins.')">
+                        ₱2,507
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="item-boxes3">
+            <h2>Daily Bundles</h2>
+            <div class="box-container">
+                <div class="box2">
+                    <img src="item19.png" alt="Item Box 13"> 
+                    <h4>Boost Box</h4>
+                    <div class="items" style="display: flex; align-items: center;">
+                        <img src="currency.webp" alt="Coin Icon" style="width: 32px; height: 32px; margin-right: 5px;">
+                        <button style="font-size: 20px; font-weight: bold;" 
+                                onclick="openPopup('Boost Box', ' 99', 'item19.png', 'This bundle includes a Boost Box with various items.')">99</button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img src="item20.png" alt="Item Box 14"> 
+                    <h4>Great Raid Box</h4>
+                    <div class="items" style="display: flex; align-items: center;">
+                        <img src="currency.webp" alt="Coin Icon" style="width: 32px; height: 32px; margin-right: 5px;">
+                        <button style="font-size: 20px; font-weight: bold;" 
+                                onclick="openPopup('Great Raid Box', '250', 'item20.png', 'This bundle includes a Great Raid Box with special items.')">250</button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img src="item21.png" alt="Item Box 15"> 
+                    <h4>Voyager Box</h4>
+                    <div class="items" style="display: flex; align-items: center;">
+                        <img src="currency.webp" alt="Coin Icon" style="width: 32px; height: 32px; margin-right: 5px;">
+                        <button style="font-size: 20px; font-weight: bold;" 
+                                onclick="openPopup('Voyager Box', '1,120', 'item21.png', 'This bundle includes a Voyager Box with exclusive items.')">1,120</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <h2 id="popupTitle"></h2>
+                <p id="popupPrice"></p>
+                <img id="popupImage" src="" alt="Item Image" style="max-width: 80%; height: auto; margin-top: 10px;">
+                <p id="popupDescription"></p>
+                <button id="buyButton" class="buy-button">Buy</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Niantic Inc | This project is for educational purposes only. No copyright infringment is intended.</p>
+        <p> Developed by 4EYES</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
