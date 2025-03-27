@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon GO Web Store</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Pokémon GO Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a href="index.html" class="d-flex align-items-center navbar-brand">
+                <img src="assets/img/logo.png" alt="Pokémon GO Store Logo" class="me-2">
+                <span>Web Store</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="pages/register/index.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/store/index.html">Store</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/payment/index.html">Payment</a></li>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="pages/register/register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/store/store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/payment/payment.html">Payment</a></li>
                     <li class="nav-item"><a class="nav-link" href="transactions.html">Transactions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/profile/index.html">Profile</a></li>
-                    <!-- Cart Icon -->
+                    <li class="nav-item"><a class="nav-link" href="pages/profile/profile.html">Profile</a></li>
                     <li class="nav-item">
                         <a class="nav-link position-relative" href="pages/cart/index.html">
-                            <i class="bi bi-cart3 fs-5"></i> <!-- Bootstrap Cart Icon -->
-                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                                0
-                            </span>
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">0</span>
                         </a>
                     </li>
                 </ul>
@@ -45,61 +49,61 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container text-center">
-            <h1 class="display-4">Welcome to the Pokémon GO Web Store</h1>
-            <p class="lead">Get the best deals on in-game items and bundles!</p>
-            <a href="pages/store/index.html" class="btn btn-warning btn-lg">Shop Now</a>
+            <h1>Welcome to the Pokémon GO Web Store</h1>
+            <p>Get the best deals on in-game items and bundles!</p>
+            <a href="pages/store/store.html" class="btn btn-warning btn-lg">Shop Now</a>
         </div>
     </section>
 
-    <!-- News Carousel Section -->
-<section class="container mt-5">
-    <h2 class="text-center mb-4">Latest Pokémon GO News</h2>
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <!-- News Item 1 -->
-            <div class="carousel-item active">
-                <img src="assets/img/news1.jpg" class="d-block w-100" alt="Event News">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>🌟 Special Pokémon GO Event This Weekend!</h5>
-                    <p>Earn double XP and encounter rare Pokémon from March 30-31.</p>
+    <!-- News Carousel -->
+    <section class="Acontainer mt-5">
+        <h2 class="text-center mb-4">Latest Pokémon GO News</h2>
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://www.pokemon.com/us/pokemon-news/scarlet-violet-journey-together-now-playable-in-pokemon-tcg-live">
+                        <img src="assets/img/news1.png" class="d-block w-100" alt="Event News">
+                    </a>
+                    <div class="carousel-caption">
+                        <h5>Scarlet & Violet—Journey Together Now Playable in Pokémon TCG Live!</h5>
+                        <p>Collect cards from the latest expansion, battle in the 2025 Standard format, and get ready for exciting new Trainer Trials.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.pokemon.com/us/pokemon-news/adventure-is-in-the-bag-with-pokemon-eastpak">
+                        <img src="assets/img/news2.png" class="d-block w-100" alt="New Update">
+                    </a>
+                    <div class="carousel-caption">
+                        <h5>Adventure Is in the Bag with Pokémon × Eastpak</h5>
+                        <p>A new collaboration puts the fun in functional accessories.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                <a href="https://www.pokemon.com/us/pokemon-news/sizzlipede-sizzles-in-pokemon-gos-bug-out-event/">
+                    <img src="assets/img/news3.png" class="d-block w-100" alt="Community Day">
+                </a>
+                    <div class="carousel-caption">
+                        <h5>Sizzlipede Sizzles in Pokémon GO’s Bug Out Event</h5>
+                        <p>Fly high and dig deep during this celebration of Bug-type Pokémon.</p>
+                    </div>
                 </div>
             </div>
-            <!-- News Item 2 -->
-            <div class="carousel-item">
-                <img src="assets/img/news2.jpg" class="d-block w-100" alt="New Update">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>🔔 New Features Coming Soon</h5>
-                    <p>Niantic teases an exciting new PvP mode in the next update.</p>
-                </div>
-            </div>
-            <!-- News Item 3 -->
-            <div class="carousel-item">
-                <img src="assets/img/news3.jpg" class="d-block w-100" alt="Community Day">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>🔥 April Community Day Announced</h5>
-                    <p>Get ready to catch a special shiny Pokémon on April 15!</p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-</section>
-
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; © 2025 Niantic Inc | This project is for educational purposes only. No copyright infringment is intended.</p>
-        <p> Developed by 4EYES </p>
-
-        
-
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Niantic Inc | This project is for educational purposes only.</p>
+            <p>Developed by 4EYES</p>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
