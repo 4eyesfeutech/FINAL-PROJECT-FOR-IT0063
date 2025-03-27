@@ -1,57 +1,47 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
 }
 
-header {
-  background-color: #4CAF50;
+/* Hero Section */
+.hero {
+  background: url('../img/hero-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
   color: white;
-  padding: 10px 20px;
-  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-.logo {
-  width: 50px;
+/* Navbar */
+.navbar {
+  padding: 15px;
 }
 
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
+/* Cart Icon Badge */
+.navbar .badge {
+  font-size: 0.75rem;
+  padding: 4px 6px;
 }
 
-main {
-  padding: 20px;
+/* Carousel Styling */
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-footer {
-  text-align: center;
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.item-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item {
-  border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-  background-color: white;
-  width: 200px;
-  text-align: center;
 }
 
-.item img {
-  width: 100%;
-  height: auto;
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
 }

@@ -1,36 +1,34 @@
-let cart = [];
+document.addEventListener("DOMContentLoaded", function () {
+  updateCartCount();
+});
 
-function addToCart(itemName, itemPrice) {
-  cart.push({ name: itemName, price: itemPrice });
-  alert(`${itemName} has been added to your cart!`);
-}
-
-function updateCartDisplay() {
-  const cartItemsDiv = document.getElementById('cartItems');
-  cartItemsDiv.innerHTML = ''; // Clear previous items
-  let total = 0;
-
-  cart.forEach(item => {
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'cart-item';
-    itemDiv.innerHTML = `<p>${item.name} - $${item.price}</p>`;
-    cartItemsDiv.appendChild(itemDiv);
-    total += item.price;
-  });
-
-  document.getElementById('totalPrice').innerText = `Total: $${total}`;
-}
-
-function proceedToPayment() {
-  if (cart.length === 0) {
-    alert("Your cart is empty!");
-  } else {
-    alert("Proceeding to payment...");
-    // Redirect to payment page or implement payment logic
+// Update cart count in the cart icon
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCount = document.getElementById("cart-count");
+  if (cartCount) {
+      cartCount.textContent = cart.length;
   }
 }
 
-// Update cart display on cart page load
-if (document.getElementById('cartItems')) {
-  updateCartDisplay();
+// Add to Cart Function
+function addToCart(itemName, itemPrice) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({ name: itemName, price: itemPrice });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+  showToast(`${itemName} has been added to your cart!`);
+}
+
+// Show Toast Notification
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "toast-container";
+  toast.innerHTML = `<div class="toast-message">${message}</div>`;
+  
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+      toast.remove();
+  }, 3000);
 }
