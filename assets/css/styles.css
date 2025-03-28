@@ -19,7 +19,7 @@ body::before {
   position: absolute;
   top: -26px;
   left: 0;
-  width: 1534px;
+  width: 1518px;
   height: 1400px;
   background-color: rgba(0, 0, 0, 0.3.5); 
   z-index: -1;
@@ -58,10 +58,11 @@ body::before {
 
 /* Navbar */
 .navbar {
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 18px;
-  background: linear-gradient(90deg, #58a6ff, var(--primary-color));
+  background: linear-gradient(90deg, #4A90E2, #0056B3); /* Adjusted gradient */
 }
+
 
 .navbar-brand {
   display: flex;
@@ -89,6 +90,8 @@ body::before {
 .navbar-brand:hover img {
   transform: scale(1.1); 
 }
+
+
 
 /* News Carousel */
 .Acontainer {
