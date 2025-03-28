@@ -1,12 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f9fa;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #62B9F0;
+    background-color: rgb(37 99 235);
     color: white;
     padding: 15px;
     display: flex;
@@ -34,7 +33,7 @@ nav {
 }
 
 nav button {
-    background-color: #62B9F0;
+    background-color: rgb(37 99 235);
     color: white;
     border: none;
     padding: 10px 20px; 
@@ -157,7 +156,7 @@ main {
 }
 
 button {
-    background-color: #68B484;
+    background-color: rgb(234 179 8);
     color: white;
     border: none;
     padding: 15px;
@@ -172,7 +171,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #62B9F0;
+    background-color: rgb(31 41 55);
     color: white;
     position: relative;
 }
@@ -255,7 +254,7 @@ footer {
 }
 
 .buy-button {
-    background-color: #68B484; 
+    background-color: rgb(234 179 8); 
     color: white; 
     border: none; 
     padding: 15px 30px; 
@@ -271,5 +270,5 @@ footer {
 }
 
 .buy-button:hover {
-    background-color: #218838;
+    background-color: rgb(234 179 8);
 }
