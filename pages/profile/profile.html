@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <nav class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">Pokémon GO Store</a>
+            <ul class="flex space-x-6 text-white">
+                <li class="nav-item"><a class="nav-link" href="pages/register/register.html" class="hover:underline">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/store/store.html" class="hover:underline">Store</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/cart/cart.html" class="hover:underline">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/payment/payment.html" class="hover:underline">Payment</a></li>
+                <li class="nav-item"><a class="nav-link" href="transactions.html" class="hover:underline">Transactions</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html" class="hover:underline">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Username:</strong> <span id="username"></span></p>
+        </div>
+        <button id="editProfile">Edit Profile</button>
+        <button id="logout">Logout</button>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
