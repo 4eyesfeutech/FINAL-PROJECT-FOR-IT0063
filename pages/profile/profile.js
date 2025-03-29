@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("username").textContent = user.username || "N/A";
     } else {
         alert("No user data found. Please register first.");
-        window.location.href = "../../register/index.html"; // Corrected path
+        window.location.href = "register.html"; // Corrected path
     }
 
     // Logout functionality
