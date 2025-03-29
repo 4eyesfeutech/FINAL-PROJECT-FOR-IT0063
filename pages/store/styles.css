@@ -14,17 +14,27 @@ header {
     flex-wrap: wrap; 
 }
 
+header {
+    display: flex;              
+    justify-content: center;     
+    align-items: center;         
+    padding: 10px;             
+}
+
 .logo-title {
     display: flex; 
     align-items: center; 
     flex: 1; 
+    justify-content: center;     
 }
 
 header h1 {
-    font-weight: normal; 
+    font-weight: bold; 
+    margin: 0;                  
 }
+
 header img {
-    height: 80px; 
+    height: 70px; 
     margin-right: 10px; 
 }
 
@@ -42,7 +52,7 @@ nav button {
     outline: none;
     padding: 10px 20px; 
     cursor: pointer;
-    margin: 5px; 
+    margin: 2px; 
     font-size: 18px;
     transition: box-shadow 0.3s;
     flex: 1 1 auto;
@@ -51,7 +61,6 @@ nav button {
 nav button:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 main {
     padding: 20px;
 }
