@@ -5,9 +5,9 @@ body {
 }
 
 header {
-    background-color: rgb(37 99 235);
+    background: linear-gradient(90deg, #4A90E2, #0056B3);
     color: white;
-    padding: 15px;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -36,11 +36,11 @@ nav {
 }
 
 nav button {
-    background-color: rgb(37 99 235);
+    background: transparent;
     color: white;
     border: none;
+    outline: none;
     padding: 10px 20px; 
-    border-radius: 5px;
     cursor: pointer;
     margin: 5px; 
     font-size: 18px;
