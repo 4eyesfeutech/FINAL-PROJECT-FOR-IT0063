@@ -5,7 +5,7 @@ var span = document.getElementById("closePopup");
 function openPopup(title, price, imageUrl, description) {
     document.getElementById("popupTitle").innerText = title;
     document.getElementById("popupPrice").innerText = price;
-    document.getElementById("popupImage").src = '/assets' + imageUrl; 
+    document.getElementById("popupImage").src = imageUrl; 
     document.getElementById("popupDescription").innerText = description; 
     popup.style.display = "block";
 }
