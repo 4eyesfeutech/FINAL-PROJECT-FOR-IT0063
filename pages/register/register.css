@@ -7,44 +7,45 @@ body {
 
 /* Navbar */
 .navbar {
-    padding: 10PX 0; 
+    padding: 10px 0;
     font-size: 18px;
     background: linear-gradient(90deg, #4A90E2, #0056B3);
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
 }
-  
-  .navbar-brand {
+
+.navbar-brand {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar-brand img {
+}
+
+.navbar-brand img {
     height: 70px;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .navbar-brand span {
+}
+
+.navbar-brand span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: white; 
+    color: white;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar-brand:hover span {
-    color: var(--secondary-color); 
-  }
-  
-  .navbar-brand:hover img {
-    transform: scale(1.1); 
-  }
+}
 
+.navbar-brand:hover span {
+    color: var(--secondary-color);
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
 
 /* Register Form */
 .container {
     max-width: 500px;
+    margin: auto;
+    padding: 20px;
 }
 
 form {
@@ -93,7 +94,7 @@ form button:hover {
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, #222, #444); 
+    background: linear-gradient(to right, #222, #444);
     color: white;
     padding: 20px;
     text-align: center;
@@ -106,15 +107,15 @@ footer p {
     margin: 5px 0;
     opacity: 0.9;
     transition: opacity 0.3s ease-in-out;
-    white-space: nowrap; 
+    white-space: nowrap;
     text-overflow: ellipsis;
-    display: block; 
-    max-width: 100%; 
+    display: block;
+    max-width: 100%;
 }
 
 footer p:hover {
     opacity: 1;
-    color: #FFD700; 
+    color: #FFD700;
 }
 
 .footer-social a:hover {
@@ -122,3 +123,265 @@ footer p:hover {
     transform: scale(1.2);
 }
 
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 0;
+    font-size: 18px;
+    background: linear-gradient(90deg, #4A90E2, #0056B3);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover span {
+    color: var(--secondary-color);
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+/* Register Form */
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+form button {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.4;word-wrap: break-word;
+    margin-top: 40px;
+    border-top: 5px solid #FFD700;
+}
+
+footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    display: block;
+    max-width: 100%;
+}
+
+footer p:hover {
+    opacity: 1;
+    color: #FFD700;
+}
+
+.footer-social a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 4px 4px 4px 4px;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form input {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 12px;
+        
+      }
+        
+    }
+
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    form {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 1px; 
+    }
+
+    footer p {
+        font-size: 10px;
+        margin: 0px 0;
+        line-height: 20PX;
+        white-space: nowrap;
+    }
+
+    
+}
+@media (max-width: 320px) {
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    .navbar-brand span {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    form {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    form input {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    form button {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    footer {
+        font-size: 0.7rem; 
+        padding: 6px;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+        max-width: 80%;
+    }
+}
