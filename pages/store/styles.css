@@ -1,5 +1,15 @@
+/* Global Styles */
+:root {
+    --primary-color: #007aff;
+    --secondary-color: #ffcc00;
+    --text-color: white;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+    background: url('../img/home.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -9,62 +19,41 @@ header {
     color: white;
     padding: 10px 0;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
     flex-wrap: wrap; 
-}
-
-header {
-    display: flex;              
-    justify-content: center;     
-    align-items: center;         
-    padding: 10px;             
 }
 
 .logo-title {
     display: flex; 
     align-items: center; 
+    margin-left: 260px;
     flex: 1; 
-    justify-content: center;     
-}
-
-header h1 {
-    font-weight: bold; 
-    margin: 0;                  
 }
 
 header img {
     height: 70px; 
-    margin-right: 10px; 
+    margin-right: 20px; 
 }
 
+/*nav*/
 nav {
-    display: flex;
-    justify-content: flex-end; 
     flex: 1; 
-    flex-wrap: wrap; 
 }
 
-nav button {
-    background: transparent;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 10px 20px; 
-    cursor: pointer;
-    margin: 2px; 
-    font-size: 18px;
-    transition: box-shadow 0.3s;
-    flex: 1 1 auto;
+nav .navbar-nav {
+    flex-direction: row; 
 }
 
-nav button:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+nav .nav-link {
+        font-size: 18px;
+    font-weight: bold; 
+    margin: 0 10px; 
 }
+
 main {
     padding: 20px;
 }
 
+/*boxes and img*/
 .featured {
     text-align: left;
     margin-bottom: 30px;
@@ -78,88 +67,50 @@ main {
     display: flex; 
     align-items: center; 
     justify-content: center; 
+    width: 1000px;
+    margin: 0 auto; 
 }
 
 .feature-box img {
     height: 250px; 
-    margin-right: 50px; 
+    margin-right: 20px;
 }
 
 .feature-box:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.price {
-    font-weight: bold;
-}
-
-.item-boxes {
-    margin: 15px 0;
-}
-
-.item-boxes2 {
-    margin: 15px 0;
-}
-
-.item-boxes3 {
+.item-boxes, .item-boxes2, .item-boxes3 {
     margin: 15px 0;
 }
 
 .box-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between; 
 }
 
-.box {
+.box, .box2 {
     background-color: rgb(218, 235, 233);
     border-radius: 20px;
-    margin: 10px;
+    margin: 10px; 
     padding: 15px;
-    flex: 1 1 calc(30% - 20px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     text-align: center;
     transition: box-shadow 0.3s;
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box; 
 }
 
-
-
-
-.box img {
+.box img, .box2 img {
     height: 250px; 
     margin-bottom: 10px; 
 }
 
-.box:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.box2 {
-    background-color: rgb(218, 235, 233);
-    border-radius: 20px;
-    margin: 10px;
-    padding: 15px;
-    flex: 1 1 calc(20% - 20px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: box-shadow 0.3s;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-}
-
-
-
-
-.box2 img {
-    height: 250px; 
-    margin-bottom: 10px; 
-}
-
-.box2:hover {
+.box:hover, .box2:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -182,15 +133,31 @@ button:hover {
 }
 
 footer {
-    text-align: center;
-    font-weight: normal;
-    padding: 20px;
     background: linear-gradient(to right, #222, #444);
     color: white;
+    padding: 20px;
+    text-align: center;
     position: relative;
-}
+    border-top: 3px solid var(--secondary-color);
+  }
+  
+  footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  
+  footer p:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+  }
+  
+  .footer-social a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+  }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     header {
         flex-direction: column; 
@@ -202,9 +169,64 @@ footer {
         width: 100%; 
     }
 
-    nav button {
+    nav .nav-link {
         flex: 1 1 100%; 
         margin: 5px 0; 
+    }
+
+    .feature-box {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .feature-box img {
+        height: auto; 
+        margin: 0 0 10px 0; 
+    }
+
+    .box, .box2 {
+        flex: 1 1 calc(50% - 20px); 
+        margin: 10px 0; 
+    }
+
+    .popup-content {
+        width: 90%; 
+    }
+
+    .buy-button {
+        padding: 10px 20px; 
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 50px; 
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .feature-box img {
+        height: 200px; 
+    }
+
+    .box img, .box2 img {
+        height: 150px; 
+    }
+
+    .popup-content {
+        padding: 10px; 
+    }
+
+    .buy-button {
+        padding: 10px 15px;
+        font-size: 14px; 
+    }
+
+    .box, .box2 {
+        width: calc(100% - 20px); 
     }
 }
 
@@ -217,7 +239,6 @@ footer {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4); 
 }
 
@@ -250,13 +271,9 @@ footer {
     font-weight: bold; 
     cursor: pointer; 
 }
+
 .close:hover {
     color: black; 
-}
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .popup-content {
@@ -268,7 +285,7 @@ footer {
 }
 
 .buy-button {
-    background-color: rgb(234 179 8); 
+    background-color: rgb(234 179, 8); 
     color: white; 
     border: none; 
     padding: 15px 30px; 
@@ -284,5 +301,5 @@ footer {
 }
 
 .buy-button:hover {
-    background-color: rgb(234 179 8);
+    background-color: rgb(234 179, 8);
 }
