@@ -33,26 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   }
 
-// Preloader Functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const preloader = document.getElementById("preloader");
-
-  // Ensure the preloader is visible initially
-  if (preloader) {
-    preloader.style.display = "block";
-  }
-
-  // Preloader Delay
-  window.addEventListener("load", function () {
-    if (preloader) {
-      setTimeout(() => {
-        setTimeout(() => {
-          preloader.style.display = "none"; 
-        }, 500);
-      },3500);
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   // Placeholder data for orders
@@ -99,5 +79,26 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     ordersList.appendChild(row);
+  });
+});
+
+// Preloader Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.getElementById("preloader");
+
+  // Ensure the preloader is visible initially
+  if (preloader) {
+    preloader.style.display = "block";
+  }
+
+  // Preloader Delay
+  window.addEventListener("load", function () {
+    if (preloader) {
+      setTimeout(() => {
+        setTimeout(() => {
+          preloader.style.display = "none"; 
+        }, 500);
+      },3500);
+    }
   });
 });
