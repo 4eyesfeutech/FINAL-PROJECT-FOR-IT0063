@@ -17,41 +17,29 @@ body {
 /* Navbar */
 .navbar {
   background: linear-gradient(90deg, #4A90E2, #0056B3);
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 70px;
   transition: transform 0.3s ease-in-out;
 }
 
 .navbar-brand span {
   font-size: 1.5rem;
   font-weight: 600;
-  color: white;
+  color: white; 
   transition: color 0.3s ease-in-out;
 }
 
-.navbar-brand:hover img {
-  transform: scale(1.1);
-}
-
 .navbar-brand:hover span {
-  color: #FFD700;
+  color: rgb(255, 204, 0); 
 }
 
+.navbar-brand:hover img {
+  transform: scale(1.1); 
+}
 .navbar-nav {
   display: flex;
   gap: 20px;
