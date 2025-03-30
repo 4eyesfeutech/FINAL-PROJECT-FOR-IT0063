@@ -42,15 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
     preloader.style.display = "block";
   }
 
-  // Wait for the page to load and then play the preloader for 7 seconds
+  // Preloader Delay
   window.addEventListener("load", function () {
     if (preloader) {
       setTimeout(() => {
-        preloader.style.opacity = "0"; // Add a fade-out effect
         setTimeout(() => {
-          preloader.style.display = "none"; // Hide the preloader completely
-        }, 500); // Match the fade-out duration
-      },3500); // Keep the preloader visible for 7 seconds
+          preloader.style.display = "none"; 
+        }, 500);
+      },3500);
     }
   });
 });

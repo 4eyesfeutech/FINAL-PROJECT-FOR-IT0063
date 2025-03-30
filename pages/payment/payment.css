@@ -26,20 +26,20 @@ body {
     height: 70px;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .navbar-brand span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: white; 
+    color: white;
     transition: color 0.3s ease-in-out;
   }
-  
+
   .navbar-brand:hover span {
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
   }
-  
+
   .navbar-brand:hover img {
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
 
 /* Payment Box */
@@ -162,8 +162,7 @@ form button:hover {
     }
 
     footer {
-        padding: 1px; 
-        
+        padding: 1px;
     }
 
     footer p {
@@ -175,4 +174,14 @@ form button:hover {
         padding-top: 0px;
         padding-bottom: 0px;
     }
+}
+
+#preloader {
+    background: #000 url("../../assets/img/Preloader.gif") no-repeat center center;
+    background-size: 100vmax;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    transition: opacity 0.5s ease;
 }
