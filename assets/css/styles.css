@@ -60,7 +60,7 @@ body::before {
 .navbar {
   padding: 10px 0;
   font-size: 18px;
-  background: linear-gradient(90deg, #4A90E2, #0056B3); /* Adjusted gradient */
+  background: linear-gradient(90deg, #4A90E2, #0056B3); 
 }
 
 .navbar-brand {
