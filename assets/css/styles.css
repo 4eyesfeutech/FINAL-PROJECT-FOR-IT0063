@@ -363,7 +363,7 @@ footer p:hover {
 /*Preloader*/
 
 #preloader {
-  background: #000 url('../img/Preloader.GIF') no-repeat center center;
+  background: #000 url('../img/Preloader.gif') no-repeat center center;
   background-size: 100vmax;
   height: 100vh;
   width: 100vw;
