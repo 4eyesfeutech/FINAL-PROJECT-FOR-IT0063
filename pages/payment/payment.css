@@ -1,0 +1,178 @@
+/* Root Variables */
+:root {
+    --primary-color: #007aff;
+    --secondary-color: #ffcc00;
+    --bg-color: #f7fafc;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #4A90E2, #0056B3);
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover span {
+    color: var(--secondary-color); 
+  }
+  
+  .navbar-brand:hover img {
+    transform: scale(1.1); 
+  }
+
+/* Payment Box */
+.payment-box {
+    max-width: 480px;
+}
+
+/* Input Fields */
+form input, form select {
+    border: 2px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.3);
+}
+
+/* Button */
+form button {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+
+    position: relative;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer p:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 16px;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .payment-box {
+        padding: 20px;
+    }
+
+    form input, form select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+
+    .payment-box {
+        padding: 15px;
+    }
+
+    form input, form select {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 1px; 
+        
+    }
+
+    footer p {
+        font-size: 10px;
+        margin: 0px 0;
+        line-height: 10PX;
+        white-space: nowrap;
+        margin-bottom: 0 px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
