@@ -7,29 +7,38 @@ body {
 
 /* Navbar */
 .navbar {
-    background: linear-gradient(90deg, #4A90E2, #0056B3);
-    padding: 10px;
+    padding: 10px 0;
     font-size: 18px;
-}
-
-.navbar-brand img {
+    background: linear-gradient(90deg, #4A90E2, #0056B3); 
+}   
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand img {
     height: 70px;
     transition: transform 0.3s ease-in-out;
+    margin-right: 10px;
   }
-
+  
   .navbar-brand span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: white;
+    color: white; 
     transition: color 0.3s ease-in-out;
   }
-
+  
   .navbar-brand:hover span {
     color: #ffcc00;
      
   }
+  
   .navbar-brand:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); 
   }
 
 /* Register Form */
@@ -157,6 +166,7 @@ footer {
 
 
 @media (max-width: 480px) {
+
     .navbar {
         flex-direction: column;
         text-align: center;
@@ -175,11 +185,13 @@ footer {
         max-width: 100%;
         margin: auto;
         padding: 20px;
+     
     }
 
     form {
         padding: 15px;
         border-radius: 8px;
+        
     }
 
     form input {
@@ -194,6 +206,8 @@ footer {
 
     footer {
         padding: 1px; 
+        margin-top: 182PX;
+        width: 100%;
     }
 
     footer p {
@@ -238,6 +252,7 @@ footer {
     footer {
         font-size: 0.7rem; 
         padding: 6px;
+    
     }
 
     footer p {

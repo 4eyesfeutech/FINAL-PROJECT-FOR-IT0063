@@ -9,10 +9,9 @@
 <body>
 
     <!-- Preloader -->
-    <div id="preloader">
+    <div id="preloader"></div>
 
-    </div>
-    
+    <!-- Navigation Bar -->
     <nav class="bg-blue-600 p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-2xl font-bold">Pokémon GO Store</a>
@@ -27,26 +26,27 @@
         </div>
     </nav>
     
+    <!-- Profile Section -->
     <div class="profile-container">
         <div class="profile-card">
             <img src="avatar.png" alt="User Avatar" class="profile-avatar">
             <h2>User Profile</h2>
             <div class="profile-info">
-                <p><strong>Full Name:</strong> <span id="fullName">John Doe</span></p>
+                <p><strong>Player ID:</strong> <span id="full-name">00000</span></p>
                 <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
-                <p><strong>Username:</strong> <span id="username">john_doe</span></p>
+                <p><strong>IGN:</strong> <span id="username">john_doe</span></p>
             </div>
             <div class="button-group">
-                <button id="editProfile">Edit Profile</button>
-                <button id="logout" class="logout">Logout</button>
+                <button id="edit-profile" class="btn">Edit Profile</button>
+                <button id="logout" class="btn logout">Logout</button>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-                <p>&copy; 2025 Niantic Inc | This project is for educational purposes only. No copyright infringment is intended.</p>
-                <p> Developed by 4EYES</p>
+            <p>&copy; 2025 Niantic Inc | This project is for educational purposes only. No copyright infringement is intended.</p>
+            <p>Developed by 4EYES</p>
         </div>
     </footer>
     

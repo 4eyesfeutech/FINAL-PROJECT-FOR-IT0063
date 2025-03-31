@@ -1,3 +1,54 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const registerForm = document.querySelector("form");
+  const profileModal = new bootstrap.Modal(document.getElementById("profileCreatedModal"));
+  const redirectBtn = document.getElementById("redirect-btn");
+
+  // Handle form submission
+  registerForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent actual form submission
+
+      // Get input values
+      const email = document.querySelector("input[type='email']").value;
+      const ign = document.querySelector("input[placeholder='Enter IGN']").value;
+
+      // Check if user already exists in localStorage
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Generate a unique Player ID
+      let playerId;
+      do {
+          playerId = `Player-${Math.floor(10000 + Math.random() * 90000)}`; // 5-digit unique ID
+      } while (users.some(user => user.playerId === playerId)); // Ensure uniqueness
+
+      // Store user data
+      const userData = {
+          playerId: playerId,
+          email: email,
+          username: ign
+      };
+
+      // Save user to localStorage
+      users.push(userData);
+      localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("currentUser", JSON.stringify(userData)); // Keep user logged in
+
+      console.log("User registered:", userData);
+
+      // Show confirmation modal
+      setTimeout(function () {
+          profileModal.show();
+      }, 500);
+  });
+
+  // Redirect to store after registration
+  redirectBtn.addEventListener("click", function () {
+      window.location.href = "store.html"; 
+  });
+});
+
+
+
+
 // Preloader Functionality
 document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById("preloader");
@@ -18,3 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+

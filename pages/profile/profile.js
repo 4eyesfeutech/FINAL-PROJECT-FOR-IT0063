@@ -1,28 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Retrieve user details from local storage
-    const user = JSON.parse(localStorage.getItem("user"));
+  // Check if user is logged in
+  const user = JSON.parse(localStorage.getItem("currentUser")); // Use "currentUser" instead of "user"
 
-    if (user) {
-        document.getElementById("full-name").textContent = user.fullName || "N/A";
-        document.getElementById("email").textContent = user.email || "N/A";
-        document.getElementById("username").textContent = user.username || "N/A";
-    } else {
-        alert("No user data found. Please register first.");
-        window.location.href = "register.html"; // Corrected path
-    }
+  if (!user) {
+      alert("You need to log in first.");
+      window.location.href = "login.html"; // Redirect to login page
+  } else {
+      // Display auto-generated Player ID, email, and IGN from registration
+      document.getElementById("full-name").textContent = user.playerId || "00000"; // Default to "00000" if no ID
+      document.getElementById("email").textContent = user.email || "N/A";
+      document.getElementById("username").textContent = user.username || "N/A";
+  }
 
-    // Logout functionality
-    document.getElementById("logout").addEventListener("click", function () {
-        localStorage.removeItem("user");
-        alert("Logged out successfully!");
-        window.location.href = "../../index.html"; // Redirect to homepage
-    });
+  // Logout functionality
+  document.getElementById("logout").addEventListener("click", function () {
+      localStorage.removeItem("currentUser"); // Clear only the current session
+      alert("Logged out successfully!");
+      window.location.href = "login.html"; 
+  });
 
-    // Edit Profile functionality
-    document.getElementById("edit-profile").addEventListener("click", function () {
-        window.location.href = "edit-profile.html"; // Ensure this file exists
-    });
+  // Edit Profile functionality
+  document.getElementById("edit-profile").addEventListener("click", function () {
+      window.location.href = "edit-profile.html"; // Ensure this file exists
+  });
 });
+
+
+
+
+
+
 
 // Preloader Functionality
 document.addEventListener("DOMContentLoaded", function () {

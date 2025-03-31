@@ -35,9 +35,9 @@ body {
   }
 
   .navbar-brand:hover span {
-    color: var(--secondary-color);
+    color: #ffcc00;
+     
   }
-
   .navbar-brand:hover img {
     transform: scale(1.1);
   }

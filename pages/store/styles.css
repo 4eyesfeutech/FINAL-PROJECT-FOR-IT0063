@@ -135,6 +135,11 @@ body {
       display: flex;
   }
 
+  .navbar-brand:hover span {
+    color: #ffcc00;
+     
+  }
+
   .navbar-nav {
       flex-direction: column;
       gap: 10px;

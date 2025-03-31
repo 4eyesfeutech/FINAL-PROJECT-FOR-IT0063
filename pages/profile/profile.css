@@ -1,31 +1,33 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9fafb;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-/* Profile container */
+/* Profile Container */
 .profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px;
 }
 
-/* Profile card */
+/* Profile Card */
 .profile-card {
-    background: white;
+    background: #ffffff;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px;
-    width: 90%;
+    max-width: 450px;
+    width: 100%;
     transition: transform 0.3s ease;
 }
 
@@ -35,18 +37,28 @@ body {
 
 /* Avatar */
 .profile-avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    transition: border 0.3s ease;
 }
 
-/* Profile details */
+.profile-avatar:hover {
+    border-color: #0056b3;
+}
+
+/* Profile Info */
 .profile-info p {
     font-size: 16px;
-    margin: 8px 0;
     color: #333;
+    margin: 10px 0;
+}
+
+.profile-info strong {
+    color: #007bff;
 }
 
 /* Buttons */
@@ -56,24 +68,23 @@ body {
     margin-top: 20px;
 }
 
-button {
-    flex: 1;
+.btn {
     background: #007bff;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
     font-size: 16px;
-    margin: 0 5px;
+    width: 48%;
 }
 
-button:hover {
+.btn:hover {
     background: #0056b3;
 }
 
-/* Logout button */
+/* Logout Button */
 .logout {
     background: #dc3545;
 }
@@ -81,6 +92,19 @@ button:hover {
 .logout:hover {
     background: #a71d2a;
 }
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
 
 footer {
     background: linear-gradient(to right, #222, #444);
