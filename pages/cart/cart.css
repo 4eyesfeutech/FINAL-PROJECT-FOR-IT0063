@@ -70,11 +70,29 @@ body {
 
 /* Footer */
 footer {
-    background-color: #343a40;
+    background: linear-gradient(to right, #222, #444);
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-}
+    position: relative;
+    border-top: 3px solid #ffcc00;
+  }
+  
+  footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  
+  footer p:hover {
+    opacity: 1;
+    color: #ffcc00;
+  }
+  
+  .footer-social a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+  }
 
 /*Preloader*/
 

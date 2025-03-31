@@ -82,6 +82,31 @@ button:hover {
     background: #a71d2a;
 }
 
+footer {
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-top: 3px solid #ffcc00;
+  }
+  
+  footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  
+  footer p:hover {
+    opacity: 1;
+    color: #ffcc00;
+  }
+  
+  .footer-social a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+  }
+/* Preloader */
 #preloader {
     background: #000 url("../../assets/img/Preloader.gif") no-repeat center center;
     background-size: 100vmax;

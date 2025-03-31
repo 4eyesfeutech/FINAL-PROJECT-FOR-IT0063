@@ -154,7 +154,7 @@ footer {
   padding: 20px;
   text-align: center;
   position: relative;
-  border-top: 3px solid var(--secondary-color);
+  border-top: 3px solid #ffcc00;
 }
 
 footer p {
@@ -165,11 +165,11 @@ footer p {
 
 footer p:hover {
   opacity: 1;
-  color: var(--secondary-color);
+  color: #ffcc00;
 }
 
 .footer-social a:hover {
-  color: var(--secondary-color);
+  color: #ffcc00;
   transform: scale(1.2);
 }
 

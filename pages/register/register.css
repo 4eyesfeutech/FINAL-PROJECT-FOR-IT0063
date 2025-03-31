@@ -87,36 +87,31 @@ form button:hover {
 footer {
     background: linear-gradient(to right, #222, #444);
     color: white;
-    padding: 0px;
     text-align: center;
     position: relative;
-    word-wrap: break-word;
-    white-space: normal;
-    line-height: 1.4;word-wrap: break-word;
-    margin-top: 40px;
-    border-top: 5px solid #FFD700;
-}
-
-footer p {
-    margin: 5px 0;
-    opacity: 0.9;
-    transition: opacity 0.3s ease-in-out;
+    border-top: 3px solid #ffcc00;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    
-    display: block;
-    max-width: 100%;
-}
-
-footer p:hover {
+      }
+  
+  footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  footer p:hover {
     opacity: 1;
-    color: #FFD700;
-}
-
-.footer-social a:hover {
-    color: var(--secondary-color);
+    color: #ffcc00;
+  }
+  
+  .footer-social a:hover {
+    color: #ffcc00;
     transform: scale(1.2);
-}
+  }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -204,8 +199,8 @@ footer p:hover {
     footer p {
         font-size: 10px;
         margin: 0px 0;
-        line-height: 20PX;
-        white-space: nowrap;
+        line-height: 17PX;
+        white-space: normal;
     }
 
     

@@ -79,28 +79,30 @@ form button:hover {
 
 
 /* Footer */
-.footer {
+footer {
     background: linear-gradient(to right, #222, #444);
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    font-size: 0.9rem;
-    width: 100%;
-
     position: relative;
-    border-top: 5px solid var(--secondary-color);
-}
-
-.footer p {
+    border-top: 3px solid #ffcc00;
+  }
+  
+  footer p {
     margin: 5px 0;
     opacity: 0.8;
     transition: 0.3s;
-}
-
-.footer p:hover {
+  }
+  
+  footer p:hover {
     opacity: 1;
-    color: var(--secondary-color);
-}
+    color: #ffcc00;
+  }
+  
+  .footer-social a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+  }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
