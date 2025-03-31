@@ -1,41 +1,44 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
-    background-color: #007bff !important;
-}
-
-.navbar-brand, .nav-link {
-    color: white !important;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.cart-icon {
-    position: relative;
+    padding: 10px 0;
+    font-size: 18px;
+    background: linear-gradient(90deg, #4A90E2, #0056B3); 
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand img {
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-brand span {
     font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    font-size: 12px;
-    padding: 3px 6px;
-}
+    font-weight: 600;
+    color: white; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover span {
+    color: var(--secondary-color); 
+  }
+  
+  .navbar-brand:hover img {
+    transform: scale(1.1); 
+  }
 
 /* Cart Page */
 .cart-container {

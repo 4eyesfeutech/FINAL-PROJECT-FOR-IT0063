@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    updateCartCount();
+    // Initialize cart count to zero
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.textContent = 0; // Set default to zero
+    }
     updateCartDisplay();
 });
 
@@ -26,16 +30,16 @@ function updateCartDisplay() {
         itemRow.innerHTML = `
             <td class="border-b p-4">${item.name}</td>
             <td class="border-b p-4">
-                <input type="number" min="1" value="${item.quantity}" class="quantity-input" data-index="${index}">
+                <input type="number" min="1" value="${item.quantity || 1}" class="quantity-input" data-index="${index}">
             </td>
             <td class="border-b p-4">$${item.price.toFixed(2)}</td>
-            <td class="border-b p-4">$${(item.price * item.quantity).toFixed(2)}</td>
+            <td class="border-b p-4">$${(item.price * (item.quantity || 1)).toFixed(2)}</td>
             <td class="border-b p-4">
                 <button class="remove-btn text-red-500" data-index="${index}">Remove</button>
             </td>
         `;
         cartItemsDiv.appendChild(itemRow);
-        total += item.price * item.quantity;
+        total += item.price * (item.quantity || 1);
     });
     
     document.getElementById("cart-total").innerText = `$${total.toFixed(2)}`;
@@ -77,7 +81,7 @@ function addToCart(itemName, itemPrice) {
         cart.push({ name: itemName, price: itemPrice, quantity: 1 });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
+    updateCartCount(); // Update count only when an item is added
     showToast(`${itemName} added to cart!`);
 }
 
@@ -111,4 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
         },3500);
       }
     });
-  });
+});

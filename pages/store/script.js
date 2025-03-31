@@ -1,6 +1,9 @@
 var popup = document.getElementById("popup");
 var span = document.getElementById("closePopup");
 
+// Temporary storage for the item details
+let tempCartItem = null;
+
 function openPopup(title, price, imageUrl, description) {
     document.getElementById("popupTitle").innerText = title;
     document.getElementById("popupPrice").innerText = price;
@@ -15,12 +18,25 @@ document.getElementById('buyButton').addEventListener('click', function() {
     const imageUrl = document.getElementById('popupImage').src;
     const description = document.getElementById('popupDescription').innerText;
 
-    // Call the addToCart function from cart.js
-    addToCart(title, price, imageUrl, description);
+    // Store the item details temporarily
+    tempCartItem = { title, price, imageUrl, description };
+
+    // Alert the user that they need to register
+    alert("You need to register before you purchase.");
     
-    // Optionally, you can show a confirmation alert
-    alert(`You have added ${title} to your cart!`);
+    // Redirect to the registration page
+    window.location.href = "register.html";
 });
+
+// Function to add the item to the cart after registration
+function addToCart() {
+    if (tempCartItem) {
+        // Call the existing addToCart function from cart.js
+        window.addToCart(tempCartItem.title, tempCartItem.price, tempCartItem.imageUrl, tempCartItem.description);
+        alert(`You have added ${tempCartItem.title} to your cart!`);
+        tempCartItem = null; // Clear the temporary item
+    }
+}
 
 span.onclick = function() {
     popup.style.display = "none";
