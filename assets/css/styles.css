@@ -63,6 +63,10 @@ body::before {
   background: linear-gradient(90deg, #4A90E2, #0056B3); 
 }
 
+.navbar-nav {
+  gap: 10px; 
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;

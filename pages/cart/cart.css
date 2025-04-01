@@ -31,9 +31,14 @@ body {
     color: white; 
     transition: color 0.3s ease-in-out;
   }
+
+  .navbar-nav {
+    gap: 10px; 
+  }
+  
   
   .navbar-brand:hover span {
-    color: var(--secondary-color); 
+    color: #ffcc00; 
   }
   
   .navbar-brand:hover img {

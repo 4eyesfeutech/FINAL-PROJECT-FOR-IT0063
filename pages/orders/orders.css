@@ -46,6 +46,15 @@ body::before {
 .navbar-brand img {
   height: 70px;
   transition: transform 0.3s ease-in-out;
+  margin-left: -7px; 
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 10px; 
+  flex-grow: 1; 
+  justify-content: center; 
+  margin-right: -545px; 
 }
 
 .navbar-brand span {
@@ -59,6 +68,10 @@ body::before {
   color: #ffcc00;
    
 }
+.navbar-nav {
+  gap: 10px; 
+}
+
 
 .navbar-brand:hover img {
   transform: scale(1.1);

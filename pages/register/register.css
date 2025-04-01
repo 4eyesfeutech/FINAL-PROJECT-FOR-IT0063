@@ -8,14 +8,32 @@ body {
 /* Navbar */
 .navbar {
     background: linear-gradient(90deg, #4A90E2, #0056B3);
-    padding: 10px;
+    padding: 0px;
     font-size: 18px;
+    font-size: 18px;
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    top: 0;
+    left: 0;
 }
 
 .navbar-brand img {
     height: 70px;
     transition: transform 0.3s ease-in-out;
+    margin-left: -418px; 
+    margin-top: -10px; 
+    margin-bottom: -10px;
   }
+
+  .navbar-nav {
+    display: flex;
+    gap: 10px; 
+    flex-grow: 1; 
+    justify-content: center; 
+    margin-right: -800px; 
+}
 
   .navbar-brand span {
     font-size: 1.5rem;

@@ -7,10 +7,12 @@ body {
 
 /* Navbar */
 .navbar {
-    padding: 10px 0;
+    padding: 0px 0;
     font-size: 18px;
     background: linear-gradient(90deg, #4A90E2, #0056B3); 
 }   
+
+
   
   .navbar-brand {
     display: flex;
@@ -22,7 +24,9 @@ body {
   .navbar-brand img {
     height: 70px;
     transition: transform 0.3s ease-in-out;
-    margin-right: 10px;
+    margin-left: -425px; 
+    margin-top: -10px; 
+    margin-bottom: -10px;
   }
   
   .navbar-brand span {
@@ -31,6 +35,7 @@ body {
     color: white; 
     transition: color 0.3s ease-in-out;
   }
+
   
   .navbar-brand:hover span {
     color: #ffcc00;
