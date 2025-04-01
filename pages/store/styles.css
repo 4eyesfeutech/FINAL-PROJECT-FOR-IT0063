@@ -24,6 +24,17 @@ body {
 .navbar-brand img {
   height: 70px;
   transition: transform 0.3s ease-in-out;
+  margin-left: -93px; 
+  margin-top: 2px; 
+  margin-bottom: 2px;
+}
+
+.navbarbuttons {
+  display: flex;
+  gap: 10px; 
+  flex-grow: 1; 
+  justify-content: center; 
+  margin-right: -800px; 
 }
 
 .navbar-brand span {
