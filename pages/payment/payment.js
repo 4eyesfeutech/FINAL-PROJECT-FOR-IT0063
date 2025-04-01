@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Redirect to transactions.html when OK button is clicked
     okBtn.addEventListener("click", function () {
-        window.location.href = "transactions.html";
+        window.location.href = "orders.html";
     });
 });
 
