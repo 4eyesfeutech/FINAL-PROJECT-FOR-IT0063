@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  updateCartCount();
-});
-
-// Update cart count in the cart icon
+// Update cart count in navbar icon
 function updateCartCount() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartCount = document.getElementById("cart-count");

@@ -49,29 +49,34 @@
     </nav>
     <!-- Cart Page -->
     <section class="container my-5">
-        <h2 class="text-center mb-4">Shopping Cart</h2>
-        <div class="card p-4">
-            <div class="table-responsive">
-                <table class="table table-striped text-center">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Total</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cart-items">
-                        <!-- Items will be dynamically inserted here -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="text-end mt-3">
-                <p class="fs-4 fw-bold">Total: <span id="cart-total">$0.00</span></p>
+        <main class="container mt-5">
+            <h2 class="mb-4">Shopping Cart</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="pages/store/assets/img/item18.PNG" width="50"> Deep Depths Ultra Ticket Box</td>
+                        <td>₱2,507.00</td>
+                        <td>1</td>
+                        <td>₱2,507.00</td>
+                        <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                    </tr>
+                    
+                
+                </tbody>
+            </table>
+            <div class="text-end">
+                <h4>Total: ₱2,507.00</h4>
                 <a href="payment.html" class="btn btn-success">Proceed to Payment</a>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
