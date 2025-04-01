@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+  updateCartCount();
+});
 
 // Update cart count in the cart icon
 function updateCartCount() {
