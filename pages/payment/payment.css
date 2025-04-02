@@ -179,10 +179,10 @@ footer {
         font-size: 10px;
         margin: 0px 0;
         line-height: 10PX;
-        white-space: nowrap;
-        margin-bottom: 0 px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+        word-wrap: break-word;
+        margin-bottom: px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
