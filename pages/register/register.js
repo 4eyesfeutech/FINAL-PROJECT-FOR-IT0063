@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get input values
       const email = document.querySelector("input[type='email']").value;
       const ign = document.querySelector("input[placeholder='Enter IGN']").value;
+      const password = document.querySelector("input[placeholder='Enter password']").value;
 
       // Check if user already exists in localStorage
       let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const userData = {
           playerId: playerId,
           email: email,
-          username: ign
+          username: ign,
+          password: password // Save password to user data
       };
 
       // Save user to localStorage
@@ -38,13 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
           profileModal.show();
       }, 500);
+
+      // Redirect to store.html after registration
+      setTimeout(function () {
+          window.location.href = "store.html"; // Redirect to store page
+      }, 2000); // Delay to ensure data is saved first
   });
 
-  // Redirect to store after registration
+  // Redirect to store after clicking the redirect button
   redirectBtn.addEventListener("click", function () {
-      window.location.href = "store.html"; 
+      window.location.href = "store.html";
   });
 });
+
 
 
 

@@ -1,33 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Check if user is logged in
-  const user = JSON.parse(localStorage.getItem("currentUser")); // Use "currentUser" instead of "user"
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")); // Use "currentUser" instead of "user"
 
-  if (!user) {
-      alert("You need to log in first.");
-      window.location.href = "login.html"; // Redirect to login page
+  if (!currentUser) {
+      alert("You need to register first.");
+      window.location.href = "register.html"; // Redirect to register page if not logged in
   } else {
       // Display auto-generated Player ID, email, and IGN from registration
-      document.getElementById("full-name").textContent = user.playerId || "00000"; // Default to "00000" if no ID
-      document.getElementById("email").textContent = user.email || "N/A";
-      document.getElementById("username").textContent = user.username || "N/A";
+      document.getElementById("full-name").textContent = currentUser.playerId || "00000"; // Default to "00000" if no ID
+      document.getElementById("email").textContent = currentUser.email || "N/A";
+      document.getElementById("username").textContent = currentUser.username || "N/A";
   }
 
   // Logout functionality
   document.getElementById("logout").addEventListener("click", function () {
-      localStorage.removeItem("currentUser"); // Clear only the current session
+      // Remove current user data from localStorage
       alert("Logged out successfully!");
-      window.location.href = "login.html"; 
+      window.location.href = "login.html"; // Redirect to login page after logout
   });
 
   // Edit Profile functionality
   document.getElementById("edit-profile").addEventListener("click", function () {
-      window.location.href = "edit-profile.html"; // Ensure this file exists
+      window.location.href = "edit-profile.html"; // Redirect to edit-profile page
   });
 });
-
-
-
-
 
 
 

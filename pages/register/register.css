@@ -132,11 +132,12 @@ footer {
   }
 
 /* Mobile Responsive Styles */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         text-align: center;
-        padding: 4px 4px 4px 4px;
+        padding: 10px;
     }
 
     .navbar-brand img {
@@ -147,56 +148,69 @@ footer {
         font-size: 1.2rem;
     }
 
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
     .container {
         max-width: 90%;
         padding: 10px;
     }
 
     form {
-        padding: 10px;
+        padding: 15px;
     }
 
     form input {
-        font-size: 13px;
-        padding: 7px;
+        font-size: 14px;
+        padding: 8px;
     }
 
     form button {
-        font-size: 14px;
-        padding: 7px;
+        font-size: 16px;
+        padding: 10px;
     }
 
     footer {
-        font-size: 0.8rem;
-        padding: 12px;
+        font-size: 0.9rem;
+        padding: 15px;
     }
-        
-    }
-
+}
 
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
         text-align: center;
-        padding: 0px;
+        padding: 5px;
+        margin-bottom: 30px;
     }
 
     .navbar-brand img {
         height: 40px;
+        margin-top: 5px;
+        margin-left: -4px; ;
+        margin-bottom: 5px;
     }
 
     .navbar-brand span {
         font-size: 1rem;
     }
 
+    .navbar-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .container {
-        max-width: 100%;
-        margin: auto;
-        padding: 20px;
+        max-width: 95%;
+        max-height: 100%;
+        padding: 15px;
     }
 
     form {
-        padding: 15px;
+        padding: 12px;
         border-radius: 8px;
     }
 
@@ -211,18 +225,21 @@ footer {
     }
 
     footer {
-        padding: 1px; 
+        padding: 10px; 
     }
 
     footer p {
         font-size: 10px;
-        margin: 0px 0;
-        line-height: 17PX;
+        line-height: 15PX;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -7px;
+        margin-bottom: -7px;
         white-space: normal;
+        
     }
-
-    
 }
+
 @media (max-width: 320px) {
     .navbar-brand img {
         height: 35px;
@@ -233,14 +250,12 @@ footer {
     }
 
     .container {
-        max-width: 500px;
-        margin: auto;
-        padding: 20px;
+        max-width: 0%; /* Use more space on smaller screens */
+        padding: 5px;
     }
 
     form {
         padding: 10px;
-        border-radius: 5px;
     }
 
     form input {
@@ -249,18 +264,18 @@ footer {
     }
 
     form button {
-        font-size: 13px;
-        padding: 6px;
+        font-size: 14px;
+        padding: 7px;
     }
 
     footer {
-        font-size: 0.7rem; 
-        padding: 6px;
+        padding: 10px;
     }
 
     footer p {
-        font-size: 0.7rem;
-        max-width: 80%;
+        font-size: 10px;
+        line-height: 1.2;
+        text-align: center;
     }
 }
 

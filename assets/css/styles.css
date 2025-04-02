@@ -21,7 +21,7 @@ body::before {
   left: 0;
   width: 1518px;
   height: 1400px;
-  background-color: rgba(0, 0, 0, 0.3.5);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: -1;
 }
 

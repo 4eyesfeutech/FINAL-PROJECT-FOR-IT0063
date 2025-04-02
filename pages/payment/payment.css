@@ -7,9 +7,8 @@
 
 /* Body */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    background-size: cover;
+font-family: 'Poppins', sans-serif;
+background-size: cover;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -120,6 +119,8 @@ footer {
 
     .navbar-brand img {
         height: 40px;
+        margin-top: 11px;
+        margin-bottom: 11px;
     }
 
     .payment-box {
@@ -172,18 +173,15 @@ footer {
     }
 
     footer {
-        padding: 1px;
-    }
-
-    footer p {
+        padding: 12px;
+      }
+    
+      footer p {
         font-size: 10px;
-        margin: 0px 0;
-        line-height: 10PX;
-        word-wrap: break-word;
-        margin-bottom: px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+        margin: 2px 0;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
 }
 
 #preloader {
