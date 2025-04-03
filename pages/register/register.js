@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           setTimeout(() => {
             preloader.style.display = "none"; 
           }, 500);
-        },2500);
+        },1000);
       }
     });
   });
