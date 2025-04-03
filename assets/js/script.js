@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           preloader.style.display = "none"; 
         }, 500);
-      },3500);
+      },1000);
     }
   });
 });
